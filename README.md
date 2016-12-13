@@ -1,7 +1,7 @@
 # kiosk-pos
 Learn how to update your KIOSK Android application (POS - Point of Sale) without user interaction with pushlink.
 
-## Are you interested to update private enterprise android app automatically?
+## Are you interested to update your private enterprise android app automatically?
 
 Pushlink covers 100% of this need.
 
