@@ -18,6 +18,6 @@ Just enjoy the code ;)
 
 NINJA worked flawlessly until android 4. :metal:
 
-When android 5 was released NINJA began to have issues and we was forced to implement a ```<receiver android:name="com.pushlink.android.NinjaReceiver" />``` to make it work. `Unfortunately` it was not fixed completely and it still can fail sometime, depending the combination of `OS version` x `Vendor`. :confused:
+When android 5 was released NINJA began to have issues and we was forced to implement a ```<receiver android:name="com.pushlink.android.NinjaReceiver" />``` to make it work. **Unfortunately** it was not fixed completely and **it still can fails sometimes**, depending the combination of `OS version` x `Vendor`. :confused:
 
 So if you have Android >= 5, the better choice is `CUSTOM MODE` with admin privileges on device.
