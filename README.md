@@ -10,8 +10,34 @@ Pushlink covers 100% of this need.
 
 ## This repo is a demo app showing how to use pushlink with android >= 5.
 
-```
-Just enjoy the code ;)
+Basically you are going to:
+
+1. Register a brodcast receiver using [custom strategy](https://www.pushlink.com/docs.xhtml#custom-strategy)
+2. Get the `uri` extra and call: 
+``` java
+public static boolean installPackage(Context context, Uri apkUri)
+        throws IOException {
+    InputStream in = context.getContentResolver().openInputStream(apkUri);    
+    PackageInstaller packageInstaller = context.getPackageManager().getPackageInstaller();
+    PackageInstaller.SessionParams params = new PackageInstaller.SessionParams(
+            PackageInstaller.SessionParams.MODE_FULL_INSTALL);
+    params.setAppPackageName(context.getPackageName());
+    // set params
+    int sessionId = packageInstaller.createSession(params);
+    PackageInstaller.Session session = packageInstaller.openSession(sessionId);
+    OutputStream out = session.openWrite("COSU", 0, -1);
+    byte[] buffer = new byte[65536];
+    int c;
+    while ((c = in.read(buffer)) != -1) {
+        out.write(buffer, 0, c);
+    }
+    session.fsync(out);
+    in.close();
+    out.close();
+
+    session.commit(createIntentSender(context, sessionId));
+    return true;
+}
 ```
 
 ## NINJA Disclaimer
