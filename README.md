@@ -15,8 +15,8 @@ Basically you are going to:
 1. Register a brodcast receiver using [custom strategy](https://www.pushlink.com/docs.xhtml#custom-strategy)
 2. Get the `uri` extra and call: 
 ``` java
-public void installPackage(Context context, Uri apkUri)
-        throws IOException {
+public void installSilently(Context context, Uri apkUri) throws IOException {
+
     InputStream in = context.getContentResolver().openInputStream(apkUri);    
     PackageInstaller packageInstaller = context.getPackageManager().getPackageInstaller();
     PackageInstaller.SessionParams params = new PackageInstaller.SessionParams(
@@ -36,6 +36,7 @@ public void installPackage(Context context, Uri apkUri)
     out.close();
 
     session.commit(createIntentSender(context, sessionId));
+    
 }
 ```
 
