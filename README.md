@@ -8,7 +8,7 @@ Pushlink covers 100% of this need.
 1. For Android <= 4 just use [NINJA MODE](https://www.pushlink.com/docs.xhtml#ninja). (it requires a **ROOTED** device) 
 2. For Android >= 5 just use [CUSTOM MODE](https://www.pushlink.com/docs.xhtml#custom-strategy) with [COSU](https://developer.android.com/work/cosu.html). (it requires **ADMIN PRIVILEGES** on device)
 
-## This repo is a demo app showing how to use pushlink (with android >= 5) to update versions silently.
+## How to use pushlink to update versions silently (android >= 5).
 
 Basically you are going to:
 
