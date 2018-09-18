@@ -1,0 +1,10 @@
+.DS_Store
+bin/
+gen/
+/gradle
+.gradle/
+.idea/
+*.iml
+local.properties
+/app/release
+/build
