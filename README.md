@@ -1,6 +1,6 @@
 # Sample app using pushlink
+This the right place if your are looking for:
 
-**Synonyms**
 * Installing apk without user interaction
 * Silent updates
 * Zero-touch updates
@@ -9,5 +9,24 @@
 * Dedicated devices
 * COSU - Corporate Owned Single Use devices
 
-## Steps
+## Warning
+* This sample requires the app to be a **device owner**. Device owner is NOT **device admin**.
+* ```dpm set-device-owner``` is dangerous because you can't unset it without factory reset.
+* ```dpm set-device-owner``` requires unprovisioned device. In other words: a device without accounts, like google account, etc.
+* Bottom line: Use emulator or a test born device 
 
+## Steps
+1. Clone and replace the string "yourApiKey"
+2. Build a signed APK and upload it to Pushlink
+3. Run the APK you just upload and execute: ```adb shell dpm set-device-owner com.pushlink.background/.PushlinkAdminReceiver```
+4. Make some visible change (like hello world NEW) and run again
+5. Wait and see the magic happen
+
+## Resources
+https://developer.android.com/work/cosu
+
+https://codelabs.developers.google.com/codelabs/cosu/index.html
+
+https://developer.android.com/guide/topics/admin/device-admin
+
+http://florent-dupont.blogspot.com/2015/01/android-shell-command-dpm-device-policy.html
