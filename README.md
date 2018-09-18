@@ -11,9 +11,9 @@ This the right place if your are looking for:
 
 ## Warning
 * This sample requires the app to be a **device owner**. Device owner is NOT **device admin**.
-* ```dpm set-device-owner``` is dangerous because you can't unset it without factory reset.
-* ```dpm set-device-owner``` requires unprovisioned device. In other words: a device without accounts, like google account, etc.
-* Bottom line: Use emulator or a test born device 
+* A device owner can NOT be unset without factory reset.
+* Setting a device owner requires an unprovisioned device. In other words: a device without accounts, like google account, etc.
+* Bottom line: Use emulator or a test born device before releasing to production
 
 ## Steps
 1. Clone and replace the string "yourApiKey"
