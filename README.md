@@ -11,7 +11,7 @@ This the right place if your are looking for:
 
 ## Warning
 * This sample requires the app to be a **device owner**. Device owner is NOT **device admin**.
-* A device owner can NOT be unset without factory reset.
+* There must be just *one* device owner and it can't be *unset* without factory reset.
 * Setting a device owner requires an unprovisioned device. In other words: a device without accounts, like google account, etc.
 * Bottom line: Use emulator or a test born device before releasing to production
 
