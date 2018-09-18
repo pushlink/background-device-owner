@@ -18,7 +18,7 @@ This the right place if your are looking for:
 ## Steps
 1. Clone and replace the string "yourApiKey"
 2. Build a signed APK and upload it to Pushlink
-3. Run the APK you just upload and execute: 
+3. Run the APK you just uploaded and execute: 
 ```
 adb shell dpm set-device-owner com.pushlink.background/.PushlinkAdminReceiver
 ```
