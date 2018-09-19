@@ -33,8 +33,6 @@
             <intent-filter>
                 <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
-                <!-- package name + .pushlink.APPLY (this is not a constant)  -->
-                <action android:name="com.pushlink.background.pushlink.APPLY" />
             </intent-filter>
         </receiver>
 
