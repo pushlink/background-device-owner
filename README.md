@@ -1,5 +1,6 @@
-# Sample app using pushlink
-This the right place if your are looking for:
+# Sample app using pushlink CUSTOM strategy to perform background updates
+
+Background updates synonyms:
 
 * Installing apk without user interaction
 * Silent updates
@@ -10,10 +11,10 @@ This the right place if your are looking for:
 * COSU - Corporate Owned Single Use devices
 
 ## Warning
-* This only works in devices running Android 6 (Marshmallow, API 23) or higher
+* This only works in devices running **Android 6 (Marshmallow, API 23)** or higher
 * This sample requires the app to be a **device owner**. Device owner is NOT **device admin**.
-* There must be just *one* device owner and it can't be *unset* without factory reset.
-* Setting a device owner requires an unprovisioned device. In other words: a device without accounts, like google account, etc.
+* There must be just **one** device owner and it can't be **unset** without **factory reset**.
+* Setting a device owner requires an unprovisioned device. In other words: a device **without accounts**, like google account, etc.
 * Bottom line: Use emulator or a test born device before releasing to production
 
 ## Steps
