@@ -15,6 +15,8 @@ import android.util.Log;
 import com.pushlink.android.PushLink;
 import com.pushlink.android.StrategyEnum;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -49,7 +51,7 @@ public class PushlinkSetup extends Application {
 
         try {
 
-            InputStream in = context.getContentResolver().openInputStream(apkUri);
+            InputStream in = new FileInputStream(new File(context.getFilesDir(), apkUri.getPath()));
             PackageInstaller packageInstaller = context.getPackageManager().getPackageInstaller();
             PackageInstaller.SessionParams params = new PackageInstaller.SessionParams(
                     PackageInstaller.SessionParams.MODE_FULL_INSTALL);
