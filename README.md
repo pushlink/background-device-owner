@@ -16,7 +16,7 @@ Background updates synonyms:
 - This sample requires the app to be a **device owner**. Device owner is NOT **device admin**.
 - There must be just **one** device owner and it can't be **unset** without **factory reset**.
 - Setting a device owner requires an unprovisioned device. In other words: a device **without accounts**, like google account, etc.
-- Bottom line: Use emulator or a test born device before releasing to production
+- Bottom line: Use an emulator or a test-born device before releasing it to production
 
 ## Steps
 
