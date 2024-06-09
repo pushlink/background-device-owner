@@ -21,15 +21,17 @@ Background updates synonyms:
 ## Steps
 
 1. Clone and replace the string "yourApiKey" in the PushlinkSetup.java
-2. Build a signed APK and upload it to Pushlink
-3. Deploy the APK you just uploaded and after execute:
+2. Build a signed APK
+3. Upload it to Pushlink web administration
+4. `adb install` it into the device
+5. Execute:
 
 ```
 adb shell dpm set-device-owner com.pushlink.background/.PushlinkAdminReceiver
 ```
 
-4. Make some visible change (like hello world NEW) and run again
-5. Wait and see the magic happen
+6. Make some visible change (like hello world NEW) and run it again
+7. Wait and see the magic happen
 
 ## Resources
 

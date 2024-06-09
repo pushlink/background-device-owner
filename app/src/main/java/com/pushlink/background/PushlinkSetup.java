@@ -1,5 +1,6 @@
 package com.pushlink.background;
 
+import android.annotation.SuppressLint;
 import android.app.Application;
 import android.app.PendingIntent;
 import android.app.admin.DevicePolicyManager;
@@ -9,6 +10,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageInstaller;
 import android.net.Uri;
+import android.os.Build;
 import android.provider.Settings;
 import android.util.Log;
 
@@ -42,7 +44,8 @@ public class PushlinkSetup extends Application {
                     Log.i("PUSHLINK", "You are not DEVICE OWNER. Update skipped!");
                 }
             }
-        }, new IntentFilter(getPackageName() + ".pushlink.APPLY"));
+        }, new IntentFilter(getPackageName() + ".pushlink.APPLY"),
+                Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU ? Context.RECEIVER_EXPORTED : 0);
     }
 
     /* PRIVATE */
@@ -69,7 +72,7 @@ public class PushlinkSetup extends Application {
             in.close();
             out.close();
 
-            PendingIntent pendingIntent = PendingIntent.getBroadcast(context, sessionId, new Intent("dummy.intent.not.used"), 0);
+            PendingIntent pendingIntent = PendingIntent.getBroadcast(context, sessionId, new Intent("dummy.intent.not.used"), PendingIntent.FLAG_IMMUTABLE);
             session.commit(pendingIntent.getIntentSender());
 
         } catch (IOException e) {
@@ -87,5 +90,6 @@ public class PushlinkSetup extends Application {
             return false;
         }
     }
+
 
 }
