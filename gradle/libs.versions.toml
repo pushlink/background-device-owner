@@ -1,5 +1,5 @@
 [versions]
-agp = "8.4.1"
+agp = "8.5.1"
 junit = "4.13.2"
 junitVersion = "1.1.5"
 espressoCore = "3.5.1"
@@ -7,7 +7,7 @@ appcompat = "1.6.1"
 material = "1.10.0"
 activity = "1.9.0"
 constraintlayout = "2.1.4"
-pushlinkAndroid = "5.5.3"
+pushlinkAndroid = "5.6.0"
 
 [libraries]
 junit = { group = "junit", name = "junit", version.ref = "junit" }
